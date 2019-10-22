@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+.app-listing {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px dotted black;
+    box-shadow: 0 0.2rem 1rem rgba(48, 16, 34, 0.377);
+}
+
+.app-listing:nth-child(2n) {
+    background-color: rgba(229, 143, 143, 0.568);
+}
