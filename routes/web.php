@@ -12,3 +12,8 @@
 */
 
 Route::get('/api', 'StoreController@index');
+
+Route::get('/form', 'AppFormController@index');
+
+
+Route::resource('form', 'AppFormController');
