@@ -43,15 +43,30 @@ class AppFormController extends Controller
         //
     }
 
+    public function search(Request $request)
+    {
+        $all = $request->all();
+        $searchTerm = $request->input('search_term');
+
+        //dd($app);
+        return view('search');
+    }
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $all = $request->all();
+        $searchTerm = $request->input('search_term');
+
+        $app = App::where('title', 'like', '%' . $searchTerm . '%')
+            ->first();
+
+        return view('results', ['app' => $app]);
     }
 
     /**

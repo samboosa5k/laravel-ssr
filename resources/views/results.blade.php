@@ -4,9 +4,7 @@
 
 <h1 class="site-title">Amazing App Store</h1>
 
-@if ($apps)
-@foreach ($apps as $app)
-<div class="app-listing">
+<div class="search">
     <div class="app-listing__image"></div>
     <div>
         <div>
@@ -19,7 +17,6 @@
         <span class="update-button"><a href="./form?id={{$app->id}}">Edit</a></span>
     </div>
 </div>
-@endforeach
-@endif
+
 
 @endsection

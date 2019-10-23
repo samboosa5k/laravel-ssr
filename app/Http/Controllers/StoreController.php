@@ -20,8 +20,6 @@ class StoreController extends Controller
             ->join('genres', 'genres.id', '=', 'apps.category_id')
             ->select('apps.installs', 'apps.id', 'apps.title', 'apps.rating', 'apps.current_version', 'genres.name as genre')
             ->get();
-
-        //return dd($apps);
         return view('index', ['apps' => $apps]);
     }
 }

@@ -6,7 +6,8 @@
     {!! Form::open(['class' => 'appForm','method'=>'PUT','route' => ['form.update', $app->id]]) !!}
     @csrf
     @method('PUT')
-    <h1>{{{$app->title}}}</h1>
+    <h1 class="site-title">Update: {{{$app->title}}}</h1>
+
     <h3>Title:</h3>
     {!! Form::text('title', $app->title); !!}
 
